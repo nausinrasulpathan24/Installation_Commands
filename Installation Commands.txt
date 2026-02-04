@@ -1,0 +1,49 @@
+ctrl+shift+i = copilot----shortcut
+commit-pull request
+
+***************************Git Commands*********************************
+echo "# 26JanJavaCI" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/nausinrasulpathan24/26JanJavaCI.git
+git push -u origin main
+
+Java installed path
+
+C:\Program Files\Java\jdk-21.0.10\bin
+
+*********************Jenkins Installation Commands****************************
+
+sudo -i
+
+apt-get update
+
+java -version
+
+sudo apt update && sudo apt install -y openjdk-21-jdk
+
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]"   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+
+sudo apt update
+sudo apt install jenkins
+systemctl status jenkins
+
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+1paste password
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+echo "# Jenkins-Installation-Commands" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/nausinrasulpathan24/Jenkins-Installation-Commands.git
+git push -u origin main
+
+
+
