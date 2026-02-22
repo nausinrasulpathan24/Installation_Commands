@@ -1,0 +1,102 @@
+****************System Admin Linux Commands******************
+
+ec2-user = home directory
+
+sudo su = login to root user
+
+ls = list directory content
+
+ls -l = long listing with details
+
+cd  = change directory
+e.g. cd /home/apple
+
+cd . = current directory
+
+pwd = present working directory(show current directory)
+
+mv = move or rename files/directory
+
+rm = remove files/directory
+rm*
+
+cp = copy files
+
+touch = create new empty file
+
+mkdir = create new directory
+
+rmkdir = remove new directory
+
+cat = concatenate & display file content
+
+chmod = change file permissions
+
+chown = change file permissions
+
+zip/unzip = compress/extract files
+e.g. zip -r file name.zip *
+
+head = display the first few lines of the files
+
+tail =  display the last few lines of the files
+
+find  = search for files in a directory
+
+locate = find files by name
+
+vi = edit the file
+
+tar = archive files
+
+diff == compare two files line by line
+
+grep = search text using patterns
+
+yum remove <module name> -y = uninstall package module
+
+yum install zip = to install softwares/package
+
+esc dd == delete line
+
+esc x = delete single word/character
+
+esc o = go to next line
+
+esc : wq! = save the file
+
+esc : q! = quit the file
+
+ip a s / ifconfig| more =  check ip address
+
+history = display list of previously executed commands
+
+hostname = display/sets the systems hostname
+
+clear = clears the terminal screen
+
+ping = test connectivity to N/W host(ip address/domain name)
+
+ssh = securely connects to the remote server
+e.g. ssh user@hostname
+
+scp = securely copies files between local & remote system 
+
+free = displays the amount of free & used memory in the system
+
+free -h = more memory details
+
+uname = name of machine
+
+uname -a = more details of machine
+
+df -h = disk details
+
+top = CPU details
+
+htop  =  more info of CPU
+
+
+
+
+
