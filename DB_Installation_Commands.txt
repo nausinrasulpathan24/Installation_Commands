@@ -1,0 +1,32 @@
+************DB Connectivity****************
+
+
+sudo apt update
+sudo apt upgrade
+sudo apt install mysql-client
+mysql --version
+mysql -h <endpoint>  -u admin -p 
+
+mysql -h database-2.c0v0ymem87y5.us-east-1.rds.amazonaws.com  -u admin -pMY4EQH6bQf0C0DcpBsPK
+
+
+
+SHOW DATABASES;    -- display databases 
+
+create database Nausin;
+
+use Nausin;
+
+create table tutorials_tbl(
+   tutorial_id INT NOT NULL AUTO_INCREMENT,
+   tutorial_title VARCHAR(100) NOT NULL,
+   tutorial_author VARCHAR(40) NOT NULL,
+   submission_date DATE,
+   PRIMARY KEY ( tutorial_id )
+);
+
+SHOW TABLES;
+
+DROP TABLE tutorials_tbl ;
+
+https://www.tutorialspoint.com/mysql/index.htm  
