@@ -1,0 +1,59 @@
+***********Create GCP VM using equivalent code & Jenkins Login **********************
+
+
+VM-Ubuntu-LTS 86bit 24.4-Networking allow HTTP & HTTPs
+
+click on equivalent code---copy the code and open cloud shell and paste the code
+
+
+***equivalent code****
+gcloud compute instances create jenkins-instance \
+    --project=project-ee0463c4-5c59-4235-97b \
+    --zone=us-central1-c \
+    --machine-type=e2-medium \
+    --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
+    --metadata=enable-osconfig=TRUE \
+    --maintenance-policy=MIGRATE \
+    --provisioning-model=STANDARD \
+    --service-account=389397945345-compute@developer.gserviceaccount.com \
+    --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/trace.append \
+    --tags=http-server,https-server \
+    --create-disk=auto-delete=yes,boot=yes,device-name=jenkins-instance,disk-resource-policy=projects/project-ee0463c4-5c59-4235-97b/regions/us-central1/resourcePolicies/default-schedule-1,image=projects/ubuntu-os-cloud/global/images/ubuntu-2404-noble-amd64-v20260128,mode=rw,size=25,type=pd-balanced \
+    --no-shielded-secure-boot \
+    --shielded-vtpm \
+    --shielded-integrity-monitoring \
+    --labels=goog-ops-agent-policy=v2-x86-template-1-4-0,goog-ec-src=vm_add-gcloud \
+    --reservation-affinity=any \
+&& \
+printf 'agentsRule:\n  packageState: installed\n  version: latest\ninstanceFilter:\n  inclusionLabels:\n  - labels:\n      goog-ops-agent-policy: v2-x86-template-1-4-0\n' > config.yaml \
+&& \
+gcloud compute instances ops-agents policies create goog-ops-agent-v2-x86-template-1-4-0-us-central1-c \
+    --project=project-ee0463c4-5c59-4235-97b \
+    --zone=us-central1-c \
+    --file=config.yaml
+	
+	
+	
+Connect to jenkins-instance
+go to ip addreess & paste in browser
+
+104.197.198.8:8080
+	
+enable firewall-default http-server
+
+
+go to ssh shell and paste below command to get password
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+unlock jenkins using below password
+d4e0fc7067d7465689b809151a359403
+
+give name , paasword and email save & continue
+
+Jenkins-new item-creste job-free style project-save
+
+
+
+
+
+http://104.197.198.8:8080/login?from=%2Fjob%2Fmy%2520first%2520job%2F5%2Fconsole
