@@ -1,0 +1,110 @@
+**********Git Commands***********
+
+➡ Creating a new Git project
+➡ Connecting it to GitHub
+➡ Pushing it to your repository
+
+Command	Meaning
+
+echo = Create README file
+git init = Start Git tracking
+git add	= Prepare file
+git commit = Save changes
+git branch -M main = Rename branch
+git remote add origin =	Connect to GitHub
+git push = Upload to GitHub
+
+
+echo "# Jenkins-Installation-Commands" >> README.md
+
+✅ Creates a file named README.md
+✅ Adds the text # Jenkins-Installation-Commands inside it
+
+echo → prints text
+
+>> → adds text to a file (creates file if not exists)
+
+So now you have a README file in your folder.
+
+
+
+git init
+
+✅ Initializes a Git repository in your current folder.
+
+This creates a hidden .git folder that tracks all changes.
+
+Now your folder is officially a Git project.
+
+
+
+git add README.md
+
+✅ Adds the file to the staging area.
+
+Git works in 3 stages:
+
+Working Directory
+
+Staging Area
+
+Repository (commit)
+
+This command prepares the file for commit.
+
+
+
+git commit -m "first commit"
+
+✅ Saves the staged file permanently in Git history.
+
+commit = save snapshot
+
+-m = message
+
+"first commit" = commit description
+
+Now your project has its first saved version
+
+
+
+git branch -M main
+
+✅ Renames the current branch to main.
+
+-M = force rename
+
+main = branch name
+
+By default, Git sometimes uses master.
+This command ensures your branch is named main.
+
+
+
+git remote add origin https://github.com/nausinrasulpathan24/Jenkins-Installation-Commands.git
+
+✅ Connects your local project to your GitHub repository.
+
+remote = external repo
+
+origin = nickname for GitHub repo
+
+URL = your GitHub repository link
+
+Now Git knows where to push your code.
+
+
+
+git push -u origin main
+
+✅ Uploads your local code to GitHub.
+
+push = send code to remote
+
+origin = remote name
+
+main = branch name
+
+-u = sets upstream (so next time you can just use git push)
+
+Now your project is live on GitHub 🚀
