@@ -1,0 +1,17 @@
+*************************Installed and configured Nginx*****************************
+
+Launched and configured a Linux EC2 instance on AWS
+
+
+yum update
+yum install nginx
+systemctl status nginx
+systemctl start nginx
+cd /usr/share/nginx/
+ls
+cd html/
+ls
+pwd
+vi index.html
+
+
